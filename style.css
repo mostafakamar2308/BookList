@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cabin", sans-serif;
+}
+@import url("https://fonts.googleapis.com/css2?family=Cabin&display=swap");
+:root {
+  --primaryColor: #f2f013;
+  --secondryColor: #3b2e4b;
+  --thirdColor: #6ecb63;
+  --forthColor: #ffe1af;
+}
+
+body {
+  background-color: var(--forthColor);
+  color: var(--secondryColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+.addContainer {
+  background-color: var(--thirdColor);
+  margin: 0.5em;
+  width: calc(100% - 0.5em);
+  padding: 1em;
+  border: #6ecb63 1px solid;
+  font-size: 1.05rem;
+  border-radius: 5px;
+}
+h2 {
+  background-color: var(--primaryColor);
+  border-radius: 010px;
+  padding: 0.5em;
+  margin: 1em auto;
+  display: block;
+  width: fit-content;
+  font-size: larger;
+}
+.bookName {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+}
+.bookName button {
+  border: none;
+  margin: 10px;
+  background-color: var(--primaryColor);
+  color: var(--secondryColor);
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 1em;
+}
+.nameLabel {
+  align-self: flex-end;
+  margin-bottom: 30px;
+}
+input {
+  width: 50%;
+  padding: 0.5em;
+  border-radius: 5px;
+  border: none;
+
+  margin-right: 0.5rem;
+}
+#nameInput {
+}
+#img {
+  margin-left: 25%;
+}
+.authorContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "authorLabel authorNum"
+    "authorInput authorNum";
+}
+.authorLabel {
+  grid-area: authorLabel;
+}
+#authorInput {
+  grid-area: authorInput;
+}
+.readNum {
+  grid-area: authorNum;
+  -ms-grid-column-align: center;
+  margin-top: 11px;
+  margin-left: 10px;
+}
+.time {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  gap: 0.5em 1em;
+}
+.reviewContainer {
+  margin-top: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.submit {
+  display: block;
+  margin: 1em auto;
+  border: none;
+  background-color: var(--primaryColor);
+  color: var(--secondryColor);
+  padding: 0.5em;
+  border-radius: 40px;
+  cursor: pointer;
+}

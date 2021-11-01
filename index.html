@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="addContainer">
+      <h2 class="newBook">Add a new Book</h2>
+      <form action="" method="post">
+        <div class="bookName">
+          <label for="nameInput" class="nameLabel">Book Name</label>
+          <img id="img" src="http://via.placeholder.com/150" alt="" />
+          <input
+            type="file"
+            id="cover"
+            accept="image/*"
+            type="file"
+            style="display: none"
+          />
+          <input type="text" name="nameInput" id="nameInput" />
+          <button
+            type="button"
+            onclick="document.getElementById('cover').click()"
+          >
+            Choose your Cover
+          </button>
+        </div>
+
+        <div class="authorContainer">
+          <label for="author" class="authorLabel">Author</label>
+          <input type="text" name="author" id="authorInput" />
+          <p class="readNum" style="visibility: hidden">
+            You have read 0 books for the author
+          </p>
+        </div>
+
+        <div class="time">
+          <label for="start">Started Reading in</label>
+          <label for="finish">Finished Reading in</label>
+          <input type="date" name="start" id="start" />
+          <input type="date" name="finish" id="finish" />
+        </div>
+        <div class="reviewContainer">
+          <label for="review">Review</label>
+          <textarea name="review" id="review" cols="60" rows="5"></textarea>
+        </div>
+        <button type="button" class="submit">Submit Book</button>
+      </form>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>
